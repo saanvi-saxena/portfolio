@@ -1,0 +1,227 @@
+/* =========================================
+   Google Fonts
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+/* =========================================
+   Design System
+========================================= */
+
+:root {
+
+    /* Background */
+    --bg-primary: #020617;
+    --bg-secondary: #071122;
+    --bg-card: rgba(15, 23, 42, 0.65);
+
+    /* Text */
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+
+    /* Accent */
+    --accent-purple: #8B5CF6;
+    --accent-cyan: #22D3EE;
+    --accent-blue: #3B82F6;
+
+    /* Border */
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    /* Border Radius */
+    --radius-sm: 0.75rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-full: 999rem;
+
+    /* Shadow */
+    --shadow-glow: 0 0 2rem rgba(139, 92, 246, 0.25);
+
+    /* Transition */
+    --transition: 0.35s ease;
+}
+
+/* =========================================
+   Reset
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+    position: relative;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+/* =========================================
+   Aurora Background
+========================================= */
+
+body::before,
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:28rem;
+    height:28rem;
+
+    border-radius:50%;
+
+    filter:blur(8rem);
+
+    z-index:-1;
+}
+
+body::before{
+
+    top:-8rem;
+    left:-8rem;
+
+    background:rgba(34,211,238,.18);
+}
+
+body::after{
+
+    bottom:-8rem;
+    right:-8rem;
+
+    background:rgba(139,92,246,.18);
+}
+
+/* =========================================
+   Reusable Glass Card
+========================================= */
+
+.glass {
+
+    background: var(--bg-card);
+
+    border: 0.0625rem solid var(--border-color);
+
+    border-radius: var(--radius-lg);
+
+    backdrop-filter: blur(1rem);
+
+    -webkit-backdrop-filter: blur(1rem);
+
+    box-shadow:
+        0 0.5rem 2rem rgba(0,0,0,.35);
+
+    transition: var(--transition);
+}
+
+.glass:hover{
+
+    transform: translateY(-0.35rem);
+
+    border-color: rgba(34,211,238,.25);
+
+    box-shadow:
+        0 1rem 2.5rem rgba(34,211,238,.12);
+}
+
+/* =========================================
+   Reusable Buttons
+========================================= */
+
+.btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem 1.8rem;
+
+    border: none;
+    border-radius: var(--radius-full);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+}
+
+/* Primary Button */
+
+.btn-primary {
+
+    background: linear-gradient(
+        135deg,
+        var(--accent-purple),
+        var(--accent-cyan)
+    );
+
+    color: white;
+
+    box-shadow: 0 0 1.5rem rgba(139, 92, 246, 0.25);
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-0.25rem);
+
+    box-shadow:
+        0 0 2rem rgba(34,211,238,.35),
+        0 0 3rem rgba(139,92,246,.25);
+}
+
+/* Secondary Button */
+
+.btn-secondary {
+
+    background: rgba(255,255,255,.03);
+
+    color: var(--text-primary);
+
+    border: 0.0625rem solid var(--border-color);
+
+    backdrop-filter: blur(0.75rem);
+
+    -webkit-backdrop-filter: blur(0.75rem);
+}
+
+.btn-secondary:hover {
+
+    transform: translateY(-0.25rem);
+
+    border-color: var(--accent-cyan);
+
+    background: rgba(255,255,255,.06);
+}
