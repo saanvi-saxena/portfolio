@@ -23,21 +23,41 @@ function Landing() {
                 </h2>
 
                 <p className="description">
-                    Building modern web applications, solving real-world
-                    problems, and continuously learning new technologies.
+                    I build practical applications, sharpen my problem-solving skills, and 
+                    explore new technologies to turn ideas into meaningful projects.
                 </p>
 
-                <div className="buttons">
+                <div className="hero-buttons">
+                    <a href="#projects" className="btn btn-primary">
+                        View Projects ↗
+                    </a>
 
-                    <button className="btn btn-primary">
-                        View Projects
-                    </button>
-
-                    <button className="btn btn-secondary">
-                        Contact Me
-                    </button>
-
+                    <a href="#contact" className="btn btn-secondary">
+                        Contact Me ↗
+                    </a>
                 </div>
+
+                <div className="hero-stats">
+                <div className="hero-stat">
+                    <strong>80+</strong>
+                    <span>Day Coding Streak</span>
+                </div>
+
+                <div className="hero-stat">
+                    <strong>300+</strong>
+                    <span>Problems Solved</span>
+                </div>
+
+                <div className="hero-stat">
+                    <strong>3+</strong>
+                    <span>Projects Built</span>
+                </div>
+
+                <div className="hero-stat">
+                    <strong>3+</strong>
+                    <span>Certifications</span>
+                </div>
+            </div>
 
             </div>
 

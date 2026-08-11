@@ -16,33 +16,52 @@
     background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(12px);
 
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.06);
+
     box-sizing: border-box;
 }
 
 
-
 .logo {
-    width: 45px;
-    height: 45px;
+    width: 2.8rem;
+    height: 2.8rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    border-radius: 50%;
+    border-radius: 0.85rem;
 
-    background: #7c3aed;
+    background: linear-gradient(
+        135deg,
+        var(--accent-purple),
+        var(--accent-cyan)
+    );
 
     color: white;
-    font-size: 1.15rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+
+    text-decoration: none;
+
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 0 1.2rem rgba(139, 92, 246, 0.25),
+        0 0 1.8rem rgba(34, 211, 238, 0.12);
 
     cursor: pointer;
-    transition: 0.3s ease;
+
+    transition: var(--transition);
 }
 
 .logo:hover {
-    transform: scale(1.08);
+    transform: translateY(-0.15rem) scale(1.05);
+
+    box-shadow:
+        0 0 1.5rem rgba(139, 92, 246, 0.4),
+        0 0 2rem rgba(34, 211, 238, 0.2);
 }
 
 
@@ -66,7 +85,7 @@
 }
 
 .nav-links a:hover {
-    color: #7c3aed;
+    color: var(--accent-cyan);
 }
 
 

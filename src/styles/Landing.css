@@ -152,7 +152,7 @@
    Buttons
 ========================== */
 
-.buttons{
+.hero-buttons{
 
     display:flex;
 
@@ -163,7 +163,7 @@
     flex-wrap:wrap;
 }
 
-.primary-btn{
+.btn-primary{
 
     padding:1rem 2.2rem;
 
@@ -191,7 +191,7 @@
         0 .4rem 1.5rem rgba(91,102,255,.25);
 }
 
-.primary-btn:hover{
+.btn-primary:hover{
 
     transform:translateY(-.25rem);
 
@@ -199,7 +199,7 @@
         0 .8rem 2rem rgba(91,102,255,.4);
 }
 
-.secondary-btn{
+.btn-secondary{
 
     padding:1rem 2.2rem;
 
@@ -222,7 +222,7 @@
     transition:.35s ease;
 }
 
-.secondary-btn:hover{
+.btn-secondary:hover{
 
     background:rgba(255,255,255,.08);
 
@@ -437,7 +437,7 @@
         max-width:34rem;
     }
 
-    .buttons{
+    .hero-buttons{
 
         justify-content:center;
     }
@@ -453,4 +453,121 @@
         width:25rem;
         height:25rem;
     }
+}
+
+/* ==========================
+Hero Stats
+========================== */
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+
+    margin-top: 2.5rem;
+    max-width: 38rem;
+}
+
+.hero-stat {
+    position: relative;
+    overflow: hidden;
+
+    padding: 1rem 0.8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 5.5rem;
+
+    border: 0.0625rem solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+
+    background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(0.8rem);
+
+    transition: var(--transition);
+}
+
+.hero-stat::before {
+    content: "";
+
+    position: absolute;
+
+    width: 5rem;
+    height: 5rem;
+
+    top: -2.5rem;
+    right: -2rem;
+
+    border-radius: 50%;
+
+    background: var(--accent-purple);
+
+    filter: blur(2rem);
+
+    opacity: 0;
+
+    transition: var(--transition);
+}
+
+.hero-stat:hover {
+    transform: translateY(-0.35rem);
+
+    border-color: rgba(34, 211, 238, 0.25);
+
+    box-shadow:
+        0 0 1.5rem rgba(34, 211, 238, 0.08),
+        0 0 2rem rgba(139, 92, 246, 0.06);
+}
+
+.hero-stat:hover::before {
+    opacity: 0.15;
+}
+
+.hero-stat strong {
+    position: relative;
+    z-index: 1;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    background: linear-gradient(
+        135deg,
+        var(--accent-purple),
+        var(--accent-cyan)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-stat span {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 0.2rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.72rem;
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+@media (max-width: 56.25rem) {
+
+    .hero-stats {
+        width: 100%;
+        max-width: 34rem;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        margin-top: 2.5rem;
+    }
+
 }
