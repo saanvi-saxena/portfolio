@@ -2,15 +2,18 @@ import { useState } from "react";
 import "../styles/Navbar.css";
 
 function Navbar() {
-
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <nav className="navbar">
 
-            <div className="logo">
+            <a
+                href="#home"
+                className="logo"
+                onClick={() => setMenuOpen(false)}
+            >
                 SS
-            </div>
+            </a>
 
             <div
                 className="menu-icon"

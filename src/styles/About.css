@@ -1,5 +1,5 @@
 .about {
-    padding: 6rem 8%;
+    padding: 7rem 2rem;
 }
 
 .section-title {
@@ -8,18 +8,18 @@
 }
 
 .section-title h2 {
-    font-size: 2.6rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 0.5rem;
 }
 
 .section-title p {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 1.05rem;
 }
 
 .about-content {
-    max-width: 75rem;
-    margin: auto;
+    width: min(100%, 75rem);
+    margin: 0 auto;
 
     display: flex;
     justify-content: space-between;
@@ -32,28 +32,31 @@
 }
 
 .about-text p {
-    color: #cbd5e1;
+    color: var(--text-secondary);
     line-height: 1.9;
     font-size: 1.05rem;
     margin-bottom: 1.5rem;
 }
 
-.about-card{
-    flex:1;
-    padding:2rem;
-    display:flex;
-    flex-direction:column;
-    gap:2rem;
+.about-card {
+    flex: 1;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    transition: var(--transition);
+}
+
+.about-card:hover {
+    transform: translateY(-0.4rem);
 }
 
 .info {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-}
-
-.info:not(:last-child) {
-    margin-bottom: 2rem;
 }
 
 .info span {
@@ -66,11 +69,15 @@
 }
 
 .info p {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 @media (max-width: 56.25rem) {
+    .about {
+        padding: 5rem 1.5rem;
+    }
 
     .about-content {
         flex-direction: column;

@@ -1,0 +1,234 @@
+/* =========================================
+   Certifications & Achievements Section
+========================================= */
+
+.certificates-section {
+    padding: 7rem 2rem;
+}
+
+.certificates-container {
+    width: min(100%, 70rem);
+    margin: 0 auto;
+}
+
+/* =========================================
+   Section Heading
+========================================= */
+
+.certificates-section .section-heading {
+    max-width: 42rem;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.certificates-section .section-label {
+    color: var(--accent-cyan);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.75rem;
+}
+
+.certificates-section .section-heading h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.certificates-section .section-heading h2 span {
+    background: linear-gradient(
+        135deg,
+        var(--accent-purple),
+        var(--accent-cyan)
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.certificates-section .section-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+   Certificates Grid
+========================================= */
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+/* =========================================
+   Certificate Card
+========================================= */
+
+.certificate-card {
+    position: relative;
+    overflow: hidden;
+
+    padding: 2rem;
+    min-height: 22rem;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: var(--transition);
+}
+
+.certificate-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10rem;
+    height: 10rem;
+
+    top: -5rem;
+    right: -5rem;
+
+    background: var(--accent-purple);
+
+    border-radius: 50%;
+
+    filter: blur(4rem);
+
+    opacity: 0;
+
+    transition: var(--transition);
+}
+
+.certificate-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.certificate-card:hover::before {
+    opacity: 0.2;
+}
+
+/* =========================================
+   Certificate Icon
+========================================= */
+
+.certificate-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--accent-purple),
+        var(--accent-cyan)
+    );
+
+    font-size: 1.4rem;
+
+    margin-bottom: 1.5rem;
+
+    box-shadow: 0 0 1.5rem rgba(34, 211, 238, 0.2);
+
+    transition: var(--transition);
+}
+
+.certificate-card:hover .certificate-icon {
+    transform: rotate(6deg) scale(1.08);
+
+    box-shadow: 0 0 1.75rem rgba(34, 211, 238, 0.4);
+}
+
+/* =========================================
+   Certificate Content
+========================================= */
+
+.certificate-content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.certificate-issuer {
+    color: var(--accent-cyan);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+
+    margin-bottom: 0.6rem;
+}
+
+.certificate-content h3 {
+    font-size: 1.4rem;
+    line-height: 1.35;
+
+    margin-bottom: 0.8rem;
+}
+
+.certificate-content > p:not(.certificate-issuer) {
+    color: var(--text-secondary);
+
+    font-size: 0.95rem;
+    line-height: 1.7;
+
+    margin-bottom: 1.5rem;
+}
+
+/* =========================================
+   Certificate Button
+========================================= */
+
+.certificate-content .btn {
+    align-self: flex-start;
+
+    margin-top: auto;
+
+    padding: 0.7rem 1.2rem;
+
+    font-size: 0.85rem;
+
+    transition: var(--transition);
+}
+
+.certificate-content .btn:hover {
+    transform: translateY(-0.15rem);
+}
+
+/* =========================================
+   Responsive
+========================================= */
+
+@media (max-width: 60rem) {
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 45rem) {
+
+    .certificates-section {
+        padding: 5rem 1.25rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        min-height: auto;
+    }
+
+}

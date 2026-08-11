@@ -1,15 +1,21 @@
 import Navbar from "./components/Navbar";
 import Landing from "./components/Landing";
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Certificates from "./components/Certificates";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Landing />
-      <About />
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            <Landing />
+            <About />
+            <Skills />
+            <Projects />
+            <Certificates />
+        </>
+    );
 }
 
 export default App;

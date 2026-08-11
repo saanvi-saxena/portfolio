@@ -14,18 +14,19 @@ function About() {
                 <div className="about-text">
 
                     <p>
-                        I'm a Computer Science undergraduate with a strong
-                        interest in software development and problem solving.
-                        I enjoy transforming ideas into clean, responsive,
-                        and user-friendly applications.
+                        I'm a second year Computer Science undergraduate who enjoys turning curiosity
+                        into code. Whether I'm solving a tricky DSA problem, building a web project from 
+                        scratch, or exploring the possibilities of AI, I love learning by getting hands-on.
+                        I'm always experimenting with new ideas, building things, and looking for the next 
+                        challenge that pushes me to grow.
                     </p>
 
                     <p>
-                        Currently, I'm strengthening my Data Structures & Algorithms 
-                        skills, building responsive web applications with React, and 
-                        exploring AI and Machine Learning. I enjoy solving coding problems, 
-                        participating in hackathons, and creating projects that combine 
-                        creativity with real-world impact.
+                        Currently, I'm strengthening my Data Structures & Algorithms skills
+                        in C++, building web applications with React, and exploring
+                        Artificial Intelligence and Machine Learning with Python. I enjoy
+                        solving coding problems, participating in hackathons, and working
+                        on projects that help me learn by building.
                     </p>
 
                 </div>
@@ -36,7 +37,7 @@ function About() {
                         <span>🎓</span>
                         <div>
                             <h3>Education</h3>
-                            <p>B.Tech in Computer Science (ABES Engineering College, Ghaziabd)</p>
+                            <p>B.Tech in Computer Science (ABES Engineering College, Ghaziabad)</p>
                         </div>
                     </div>
 
@@ -44,15 +45,15 @@ function About() {
                         <span>💻</span>
                         <div>
                             <h3>Interests</h3>
-                            <p>Web Development • DSA • AI</p>
+                            <p>Web Development • DSA • AI/ML</p>
                         </div>
                     </div>
 
                     <div className="info">
-                        <span>📍</span>
+                        <span>🔎 </span>
                         <div>
-                            <h3>Location</h3>
-                            <p>Ghaziabad, India</p>
+                            <h3>Currently Exploring</h3>
+                            <p>AI/ML •Backend Development</p>
                         </div>
                     </div>
 

@@ -3,9 +3,12 @@ import profileImg from "../assets/portfolio.jpg";
 
 function Landing() {
     return (
-        <section className="landing">
-
+        <section id="home" className="landing">
             <div className="landing-left">
+
+                <div className="status-badge">
+                    ✨ Open to Internships
+                </div>
 
                 <p className="intro">
                     👋 Hello, I'm
