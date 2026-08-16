@@ -32,8 +32,13 @@ function Landing() {
                         View Projects ↗
                     </a>
 
-                    <a href="#contact" className="btn btn-secondary">
-                        Contact Me ↗
+                    <a
+                        href="/SaanviResume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-secondary"
+                    >
+                        Resume ↓
                     </a>
                 </div>
 

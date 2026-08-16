@@ -37,7 +37,8 @@ function About() {
                         <span>🎓</span>
                         <div>
                             <h3>Education</h3>
-                            <p>B.Tech in Computer Science (ABES Engineering College, Ghaziabad)</p>
+                            <p>B.Tech in Computer Science</p>
+                            <p>ABES Engineering College, Ghaziabad (2025-2029)</p>
                         </div>
                     </div>
 
